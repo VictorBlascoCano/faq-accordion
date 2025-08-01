@@ -1,3 +1,16 @@
+:root {
+	--color-white: hsl(0, 100%, 100%);
+	--color-grey: hsl(30, 10%, 34%);
+	--color-blue: hsl(228, 45%, 44%);
+	--color-purple: hsl(280, 62%, 49%);
+	--color-purple-100: hsl(275, 100%, 97%);
+	--color-purple-600: hsl(292, 16%, 49%);
+	--color-purple-950: hsl(292, 42%, 14%);
+
+	--ff-work-sans: "Work Sans", sans-serif;
+	--ff-work-sans-bold: "Work Sans Bold", sans-serif;
+}
+
 @font-face {
 	font-family: "Work Sans";
 	src: url(assets/fonts/static/WorkSans-Regular.ttf);
@@ -12,16 +25,16 @@
 	font-size: 11px;
 	text-align: center;
 	margin-top: 12px;
-	color: hsl(30, 10%, 34%);
+	color: var(--color-grey);
 	& a {
-		color: hsl(228, 45%, 44%);
+		color: var(--color-blue);
 	}
 }
 
 *,
 *::before,
 *::after {
-	font-family: "Work Sans", sans-serif;
+	font-family: var(--ff-work-sans);
 	box-sizing: border-box;
 	font-weight: 400;
 }
@@ -29,7 +42,7 @@
 body {
 	margin: 0;
 	min-height: 100dvh;
-	background-color: hsl(275, 100%, 97%);
+	background-color: var(--color-purple-100);
 	background-image: url(assets/images/background-pattern-desktop.svg);
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -46,12 +59,12 @@ p {
 main {
 	width: 100%;
 	max-width: 600px;
-	padding: 40px;
+	padding: 40px 40px 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: start;
-	background-color: hsl(0, 100%, 100%);
+	background-color: var(--color-white);
 	border-radius: 15px;
 }
 
@@ -83,7 +96,7 @@ footer {
 }
 
 .question:hover p {
-	color: hsl(280, 62%, 49%);
+	color: var(--color-purple);
 }
 
 .answer {
@@ -91,7 +104,7 @@ footer {
 	margin: 0;
 	padding-bottom: 20px;
 	line-height: 1.5em;
-	color: hsl(292, 16%, 49%);
+	color: var(--color-purple-600);
 	display: none;
 }
 
@@ -106,13 +119,13 @@ section:first-of-type .answer {
 }
 
 section:not(:last-of-type) {
-	border-bottom: 1px solid hsl(275, 100%, 97%);
+	border-bottom: 1px solid var(--color-purple-100);
 }
 
 h1 {
 	margin: 0;
 	font-size: 56px;
-	font-family: "Work Sans Bold", sans-serif;
+	font-family: var(--ff-work-sans-bold);
 }
 
 button {
